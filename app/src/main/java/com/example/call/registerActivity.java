@@ -178,6 +178,7 @@ public class registerActivity extends AppCompatActivity {
                 .addOnCompleteListener(this, new OnCompleteListener<AuthResult>() {
                     @Override
                     public void onComplete(@NonNull Task<AuthResult> task) {
+
                         if (task.isSuccessful()) {
                             // Sign in success, update UI with the signed-in user's information
                             Log.d("TAG", "signInWithCredential:success");
@@ -244,4 +245,14 @@ public class registerActivity extends AppCompatActivity {
         progressDialog.show();
     }
 
+    @Override
+    protected void onStart() {
+        super.onStart();
+        FirebaseUser user = FirebaseAuth.getInstance().getCurrentUser();
+        if(user!=null){
+            Intent intent =new Intent(registerActivity.this,MainActivity.class);
+            startActivity(intent);
+            finish();
+        }
+    }
 }
