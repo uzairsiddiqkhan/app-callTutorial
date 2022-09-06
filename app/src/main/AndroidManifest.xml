@@ -16,6 +16,9 @@
         android:theme="@style/Theme.Call"
         tools:targetApi="31">
         <activity
+            android:name=".findPeopleActivity"
+            android:exported="false" />
+        <activity
             android:name=".notificationActivity"
             android:exported="false" />
         <activity

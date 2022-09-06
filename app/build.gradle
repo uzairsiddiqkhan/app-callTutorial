@@ -53,6 +53,7 @@ dependencies {
     implementation 'com.google.firebase:firebase-core:21.1.0'
     implementation 'com.google.firebase:firebase-auth'
     implementation 'com.firebaseui:firebase-ui-database:8.0.1'
+    implementation 'de.hdodenhof:circleimageview:3.1.0'
 
 
     implementation 'com.hbb20:ccp:2.6.0'
