@@ -43,21 +43,23 @@
 
     </com.google.android.material.appbar.AppBarLayout>
 
-    <com.google.android.material.bottomnavigation.BottomNavigationView
-        android:id="@+id/nav_view"
+    <androidx.coordinatorlayout.widget.CoordinatorLayout
+        android:layout_height="match_parent"
+        android:layout_width="match_parent">
+
+    <com.github.kwasow.bottomnavigationcircles.BottomNavigationCircles
+        android:id="@+id/nav_View"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_alignParentBottom="true"
-        android:layout_marginStart="0dp"
-        android:layout_marginEnd="0dp"
-        android:background="?android:attr/windowBackground"
+        android:layout_height="?attr/actionBarSize"
+        android:layout_gravity="start|bottom"
         app:menu="@menu/bottom_nav_menu" />
+
+    </androidx.coordinatorlayout.widget.CoordinatorLayout>
 
     <androidx.recyclerview.widget.RecyclerView
         android:id="@+id/contactList"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:layout_above="@+id/nav_view"
         android:layout_below="@+id/mainAppBar" />
 
 
